@@ -1,6 +1,6 @@
 <template>
 	<div class="outer-container">
-		<button class="not-print" @click="print">인쇄하기</button>
+		<button class="not-print" @click="print">인쇄하기(수정)</button>
 		<div class="inner-container">
 			<div class="dummy-content"></div>
 		</div>
