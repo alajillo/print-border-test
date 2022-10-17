@@ -1,31 +1,59 @@
-<script setup>
-// This starter template is using Vue 3 <script setup> SFCs
-// Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
-import HelloWorld from './components/HelloWorld.vue'
-</script>
-
 <template>
-  <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://vuejs.org/" target="_blank">
-      <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
-    </a>
-  </div>
-  <HelloWorld msg="Vite + Vue" />
+	<div class="outer-container">
+		<button class="not-print" @click="print">인쇄하기</button>
+		<div class="inner-container">
+			<div class="dummy-content"></div>
+		</div>
+	</div>
 </template>
 
+<script>
+export default {
+  setup(){
+    const print = () => window.print();
+    return {
+      print
+    }
+  }
+};
+</script>
+
 <style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
-}
+	.outer-container {
+		display: flex;
+		flex-direction: column;
+		margin : 0 auto;
+		align-items: center;
+		background-color: whitesmoke;
+		font-size: 14px;
+		max-width : 1184px;
+		padding-bottom: 40px;
+	}
+	.inner-container {
+		width : 100%;
+		border-radius: 4px;
+		border : 10px solid #cccccc;
+		box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.04);
+		background-color: white;
+		padding: 0 36px 57px 36px;
+	}
+  .dummy-content {
+    width : 800px;
+    height : 1800px;
+  }
+	@media print {
+		.outer-container {
+			print-color-adjust: exact !important;
+			width: 100%;
+			zoom : 90%;
+			padding: 0;
+		}
+    .not-print {
+				display: none;
+			}
+	}
+	@page {
+		size: A4;
+		margin: 0;
+	}
 </style>
