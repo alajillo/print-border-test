@@ -24,7 +24,6 @@ export default {
 		flex-direction: column;
 		margin : 0 auto;
 		align-items: center;
-		background-color: whitesmoke;
 		font-size: 14px;
 		max-width : 1184px;
 		padding-bottom: 40px;
@@ -54,6 +53,7 @@ export default {
 	}
 	@page {
 		size: A4;
-		margin: 0;
+    margin : 0.1in;
+    margin-bottom: 0;
 	}
 </style>
