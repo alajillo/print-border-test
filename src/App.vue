@@ -53,7 +53,7 @@ export default {
 	}
 	@page {
 		size: A4;
-    margin : 0.1in;
+    margin : 0.04in;
     margin-bottom: 0;
 	}
 </style>
