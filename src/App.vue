@@ -1,6 +1,6 @@
 <template>
 	<div class="outer-container">
-		<button class="not-print" @click="print">인쇄하기(1.2)</button>
+		<button class="not-print" @click="print">인쇄하기(1.3)</button>
 		<div class="inner-container">
 			<div class="dummy-content"></div>
 		</div>
@@ -53,7 +53,7 @@ export default {
 	}
 	@page {
 		size: A4;
-    margin : 0.12in;
+    margin : 1.3in;
     margin-bottom: 0;
 	}
 </style>
